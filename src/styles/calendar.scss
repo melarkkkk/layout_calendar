@@ -20,12 +20,13 @@
   }
 
   &--start-day {
-    @each $day, $step in $days {
+    @each $day in $days {
       &-#{$day} .calendar__day:first-child {
-        margin-left: $step * ($day-size + $gap);
+        margin-left: (list.index($days, $day) - 1) * ($day-size + $gap);
       }
     }
   }
+
 
   &__day {
     box-sizing: border-box;
