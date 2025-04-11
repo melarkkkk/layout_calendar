@@ -21,7 +21,7 @@
 
   &--start-day {
     @each $day, $step in $days {
-      &-#{$day} :first-child {
+      &-#{$day} .calendar__day:first-child {
         margin-left: $step * ($day-size + $gap);
       }
     }
